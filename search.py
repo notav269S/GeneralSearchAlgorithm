@@ -2,11 +2,11 @@ def advanced_search(keywords, inlist):
     matches = {}
     for _ in inlist:
         matches[_] = 0
-    for line in inslist:
+    for line in inlist:
         for letter in line.lower():
             for _letter in keywords.lower():
                 if letter == _letter:
-                    matches[name] += 1
+                    matches[letter] += 1
     try:
         del(matches['\n'])
     except:
@@ -18,5 +18,5 @@ def advanced_search(keywords, inlist):
 def simple_search(keywords, inlist):
     if keywords.lower() in inlist.lower():
         return keywords
-     else:
+    else:
         return None
