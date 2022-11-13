@@ -6,7 +6,7 @@ def advanced_search(keywords, inlist):
         for letter in line.lower():
             for _letter in keywords.lower():
                 if letter == _letter:
-                    matches[letter] += 1
+                    matches[line] += 1
     try:
         del(matches['\n'])
     except:
@@ -16,7 +16,8 @@ def advanced_search(keywords, inlist):
     return max_key
   
 def simple_search(keywords, inlist):
-    if keywords.lower() in inlist.lower():
-        return keywords
-    else:
-        return None
+    for letter in inlist:
+        if keywords.lower() in letter.lower():
+            return keywords
+        else:
+            return None
