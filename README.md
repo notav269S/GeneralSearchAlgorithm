@@ -1,4 +1,4 @@
-# GeneralSearchAlgorithm
+# General Search Algorithm
 
 ## How the Algorithm Works
 
